@@ -1,10 +1,15 @@
 /* Colours used:
-    Main Background Colour - #FFFFFF
-    Primary Main Colour - #C0CBED
-    Secondary Main Colour - #DCE3F5
-    Button Dark Green - #014235
-    Secondary Text Colour - #757575
+    Main Background Colour (White) - #FFFFFF
+    Primary Main Colour (Faded Purple) - #C0CBED
+    Secondary Main Colour (Light Purple) - #DCE3F5
+    Button (Dark Green) - #014235
+    Button Text (Off-White) - #EEEEEE
+    Secondary Text Colour (lightgrey) - #757575
 */
+
+/* Fonts:
+    Primary Font - Poppins
+    Secondary Font - Alegreya */
 
 body {
   background-color: #FFFFFF;
@@ -39,4 +44,57 @@ h4 {
 
 img {
   width: 100%;
+}
+
+a {
+  color: #EEEEEE;
+  text-decoration: none; /* No underlining */
+}
+
+a:visited { /* visited link */
+  color: #757575;
+}
+
+a:hover {
+  color: #B6B6B6;
+  text-decoration: underline; /* Underlining when hovering over a link */
+}
+a:hover,
+a:focus {
+  color: #757575;
+  text-decoration: underline;
+}
+
+a:active { /* selected link */
+  color: #7E47A9;
+}
+
+.button {
+  display: inline-block; /* since the <a> tag is inline by default, we need to change this to inline-block, but more on this in the next exercise */
+  background-color: #014235;
+  color: #EEEEEE; /* needed to override the default link color */
+  font-weight: 500;
+  padding: 10px;
+  border-radius: 20px;
+  border-bottom: 0px solid #B6B6B6; /* width of the border, type, color */
+  transition: 0.2s opacity;
+}
+.button:hover {
+  opacity: 0.8;
+  text-decoration: none;
+}
+.button:active {
+  opacity: 0.8;
+  text-decoration: none;
+}
+
+.button.contact {
+  background-color: transparent;
+  color: #757575;
+  text-transform: uppercase;
+  border: 3px solid #014235;
+}
+.button.contact:hover {
+  background-color: #014235;
+  color: #EEEEEE;
 }
