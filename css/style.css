@@ -11,6 +11,19 @@
     Primary Font - Poppins
     Secondary Font - Alegreya */
 
+* {
+  box-sizing: border-box;
+}
+
+header {
+  background-color: #DCE3F5;
+  padding: 30px 15px;
+  text-align: center;
+  margin: 30px 15px 0 15px;
+  box-shadow: 0px 3px 3px 0px rgba(50, 50, 50, 0.75);
+  position: relative;
+}
+
 body {
   background-color: #FFFFFF;
   font-family: 'Poppins', sans-serif;
@@ -70,19 +83,26 @@ a:active {
   color: #FFA382;
 }
 
+
 .button {
   display: inline-block; /* since the <a> tag is inline by default, we need to change this to inline-block, but more on this in the next exercise */
   background-color: #014235;
   color: white; /* needed to override the default link color */
   font-weight: 500;
-  padding: 12px;
-  border-radius: 20px;
+  padding: 15px;
+  border-radius: 15px;
   border-bottom: 0px solid #B6B6B6; /* width of the border, type, color */
-  transition: 0.2s opacity;
 }
+
+.button, .button:visited {
+  color: white;
+}
+
 .button:hover {
-  opacity: 0.8;
+  background-color: transparent;
   text-decoration: none;
+  border: 3px solid #014235;
+  color: #014235;
 }
 .button:active {
   opacity: 0.8;
@@ -93,9 +113,85 @@ a:active {
   background-color: transparent;
   color: #757575;
   text-transform: uppercase;
-  border: 3px solid #014235;
+  border: 3px solid #014235;;
 }
 .button.contact:hover {
   background-color: #014235;
   color: #EEEEEE;
+}
+
+/* Layout styling */
+
+.container {
+  padding: 0 15px;
+}
+
+.row {
+  margin: 25px 0; /* 25px top and bottom, 0 left and right */
+}
+
+#work .row {
+  padding-bottom: 25px;
+  border-bottom: 1px solid #4a4a4a;
+}
+
+#hero h1 {
+  text-align: center; /* Centers text */
+  margin: 0;
+}
+#hero {
+  background-color: #DCE3F5;
+  display: inline-block;
+  padding: 20px 0;
+  margin: 0 15px 0 15px;
+}
+
+.logo {
+  max-width: 100px;
+}
+
+nav > ul {
+  list-style-type: none;
+  padding: 0;
+}
+nav > ul > li {
+  display: inline-block;
+}
+nav > ul > li > a {
+  padding: 0 10px;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 12px;
+  color: #4a4a4a;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul > li {
+  display: inline-block;
+  font-weight: 500;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+ul > li > a {
+  padding: 0 10px;
+}
+
+div > ul {
+  list-style-type: disc;
+  padding: 0;
+}
+
+div > ul > li {
+  display: block;
+  font-weight: 500;
+  font-size: 12px;
+}
+
+div > ul > li > a {
+  padding: 0 10px;
 }
