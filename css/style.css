@@ -19,7 +19,7 @@ header {
   background-color: #DCE3F5;
   padding: 30px 15px;
   text-align: center;
-  margin: 30px 15px 0 15px;
+  margin: 15px 15px 0 15px;
   box-shadow: 0px 3px 3px 0px rgba(50, 50, 50, 0.75);
   position: relative;
 }
@@ -83,7 +83,7 @@ a:active {
   color: #FFA382;
 }
 
-
+/* Button Styling */
 .button {
   display: inline-block; /* since the <a> tag is inline by default, we need to change this to inline-block, but more on this in the next exercise */
   background-color: #014235;
@@ -92,6 +92,8 @@ a:active {
   padding: 15px;
   border-radius: 15px;
   border-bottom: 0px solid #B6B6B6; /* width of the border, type, color */
+  transition-duration: 0.3s;
+  transition-property opacity;
 }
 
 .button, .button:visited {
@@ -99,10 +101,13 @@ a:active {
 }
 
 .button:hover {
-  background-color: transparent;
+  display: inline-block;
   text-decoration: none;
-  border: 3px solid #014235;
+  background-color: transparent;
   color: #014235;
+  border-radius: 15px;
+  border: 3px solid #014235;
+  opacity: 0.8;
 }
 .button:active {
   opacity: 0.8;
@@ -128,11 +133,25 @@ a:active {
 
 .row {
   margin: 25px 0; /* 25px top and bottom, 0 left and right */
+
+}
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
 }
 
 #work .row {
   padding-bottom: 25px;
   border-bottom: 1px solid #4a4a4a;
+}
+#skills .row {
+  padding-bottom: 25px;
+  border-bottom: 1px solid #4a4a4a;
+}
+
+#prototype {
+  text-align: center;
 }
 
 #hero h1 {
@@ -141,18 +160,111 @@ a:active {
 }
 #hero {
   background-color: #DCE3F5;
-  display: inline-block;
   padding: 20px 0;
   margin: 0 15px 0 15px;
+  text-align: center;
+}
+#hero span {
+  display: block;
+}
+.mid {
+  margin-left: 250px;
+}
+#contact {
+  text-align: center;
+}
+
+.border {
+  margin-top: 30px;
+  padding-top: 30px;
+  border-top: 1px solid #4a4a4a;
+}
+#contact div > a {
+  margin-top: 40px;
+}
+
+#contact span {
+  display: contents;
+  font-weight: 500;
+}
+#contact span > a {
+  color: blue;
+}
+#contact span > a:hover {
+  color: red;
+}
+#contact span > a:active {
+  color: purple;
+}
+/* Style inputs with type="text", select elements and textareas */
+#form input[type=text], select, textarea {
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+
+#form {
+  background-color: #DCE3F5;
+  margin: 20px 0;
+  padding: 20px 0;
+}
+#form .container {
+  text-align: left;
+}
+
+/* Style the submit button with a specific background color etc */
+#form input[type=submit] {
+  background-color: #014235;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  transition-duration: 0.3s;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+#form input[type=submit]:hover {
+  background-color: transparent;
+  color: #014235;
+  border-radius: 15px;
+  border: 3px solid #014235;
+}
+
+/* Add a background color and some padding around the form */
+#form .container {
+  border-radius: 15px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+#main-page h2 { text-align: center;}
+#about-page h3 { margin-top: 0;}
+#about-page h2 { text-align: center;}
+#about-page h1 { margin: 10px;}
+
+.center {
+  text-align: center;
 }
 
 .logo {
   max-width: 100px;
 }
 
+nav {
+  width: auto;
+  float: right;
+  margin-top: 4px;
+}
 nav > ul {
   list-style-type: none;
-  padding: 0;
+  margin: 0 0 10px 0;
 }
 nav > ul > li {
   display: inline-block;
@@ -161,37 +273,88 @@ nav > ul > li > a {
   padding: 0 10px;
   text-transform: uppercase;
   font-weight: 500;
-  font-size: 12px;
+  font-size: 14px;
   color: #4a4a4a;
 }
 
 ul {
-  list-style-type: none;
-  padding: 0;
+  padding: 10px;
 }
 
 ul > li {
-  display: inline-block;
+  display: block;
   font-weight: 500;
-  font-size: 12px;
+  font-size: 14px;
   text-transform: uppercase;
 }
 
 ul > li > a {
   padding: 0 10px;
 }
-
-div > ul {
-  list-style-type: disc;
-  padding: 0;
+#social-icons svg {
+  width: 30px;
+  height: 30px;
+}
+#social-icons li {
+  display: inline-block;
+  width: 100px;
 }
 
-div > ul > li {
-  display: block;
-  font-weight: 500;
-  font-size: 12px;
+@keyframes color-change {
+  from {fill: #edc655;}
+  to {fill: #f76414;}
+}
+.sun {
+  animation: 4s color-change infinite alternate linear;
+}
+@keyframes cloud-move {
+  from {transform: translate(0,50px);}
+  to {transform: translate(200px,50px);}
+}
+.cloud-front {
+  animation: 20s cloud-move infinite alternate linear;
+}
+@keyframes cloud-move-reverse {
+  from {transform: translate(446px,48px);}
+  to {transform: translate(100px, 48px);}
+}
+.cloud-back {
+  animation: 34s cloud-move-reverse infinite alternate linear;
 }
 
-div > ul > li > a {
-  padding: 0 10px;
+/* ==============================
+Medium devices (640px and larger)
+================================= */
+@media only screen and (min-width: 640px) {
+  header {
+  text-align: unset;
+  padding: 20px 0 13px;}
+  [class*="col-"] {
+  width: 50%;
+  float: left;
+  padding: 10px;
+}
+#work h3 {
+  margin-top: 0;
+}
+}
+/* ==============================
+Large devices (1024px or larger)
+================================= */
+@media only screen and (min-width: 1024px) {
+  .container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+}
+/* ==============================
+X-large devices (1440px or larger)
+================================= */
+@media only screen and (min-width: 1440px) {
+}
+/* ==============================
+Extra-large devices (1920px or larger)
+================================= */
+@media only screen and (min-width: 1920px) {
 }
