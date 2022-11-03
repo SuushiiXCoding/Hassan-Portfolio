@@ -15,7 +15,7 @@
     <title>About Hassan Al-Hashimi</title>
   </head>
 
-  <body>
+  <body id="about-page">
     <!-- Header Section -->
     <header>
       <div class="container">
@@ -32,7 +32,7 @@
               <a href="about.html">About</a>
             </li>
             <li>
-              <a href="#contact">Contact</a>
+              <a href="contact.html">Contact</a>
             </li>
           </ul>
         </nav>
@@ -44,20 +44,14 @@
       <div id="hero"> <!-- Heading Section Block -->
         <div class="container">
           <h1>Get to know me</h1>
-        </div>
-      </div> <!-- Closed Heading Section Block -->
-
-      <!-- Content Section Block -->
-      <div id="hero">
-        <div class="container">
+          <div class="row">
+          <div class="column col-md-6 col-lg-7">
           <picture>
             <source srcset="img/the_nest_project/img/profile_picture/@600px.png" media="(max-width:767px)">
             <img src="img/the_nest_project/img/profile_picture/@1200px.png" alt="Profile Image">
           </picture>
-        </div>
-      </div>
-        <div id="skills">
-          <div class="container">
+          </div>
+            <div class="column col-md-6 col-lg-5">
             <h2>My Story</h2>
             <p>I am someone who's always been interested in the creative field
             since I was in my teens. I found myself to be very observant to
@@ -73,8 +67,16 @@
             architect goes through almost the same process; Concept,
             Development, and Outcome. I am able to critically think, go
             through the design thinking process and meet the clients needs.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="skills">
+          <div class="container">
+            <div class="row">
             <h2>Skills & Tools</h2>
-            <div>
+            <div class="mid">
+            <div class="col-md-6">
               <h3>Relevant Skills</h3>
               <ul>
                 <li><p>User Research</p></li>
@@ -85,7 +87,7 @@
                 <li><p>Team Collaboration</p></li>
               </ul>
             </div>
-            <div>
+            <div class="col-md-6">
               <h3>Tools I Use</h3>
               <ul>
                 <li><p>Figma</p></li>
@@ -99,22 +101,23 @@
                 <li><p>Adobe InDesign</p></li>
               </ul>
             </div>
-          </div>
-          <div class="container">
-            <a href="files/hassan's_ux_resume.pdf" class="button" target="_blank">My Resume</a>
+            </div>
+            <div class="center">
+              <a href="files/hassan's_ux_resume.pdf" class="button" target="_blank">My Resume</a>
+            </div>
           </div>
         </div>
     </main>
     <!-- Closed Main Body Content -->
 
     <!-- Footer Section -->
-    <footer>
+    <footer id="contact">
       <div class="container">
     <!-- Contact me Section -->
         <h2>Lets Talk</h2>
         <p>Looking for a UX designer for a project or simply share ideas and network?
-          Fill out the form and lets get in touch. Alternatively, you can email me.</p>
-        <div>
+          Fill out the form on the <span><a href="contact.html" target="_self">CONTACT</a></span> page and lets get in touch. Alternatively, you can email me.</p>
+        <div class="center">
           <a href="mailto:Hassan_Al-Hashimi@hotmail.com?subject=Inquiry" class="button contact"> Email me
             <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
               <title />
@@ -130,7 +133,7 @@
     <!--Social Media Links Section-->
       <div class="container">
         <!-- LINKEDIN -->
-      <ul>
+      <ul id="social-icons">
         <p>Follow me on my social media</p>
         <li>
            Linkedin <br>
