@@ -17,9 +17,7 @@
 
 header {
   background-color: #DCE3F5;
-  padding: 30px 15px;
   text-align: center;
-  margin: 15px 15px 0 15px;
   box-shadow: 0px 3px 3px 0px rgba(50, 50, 50, 0.75);
   position: relative;
 }
@@ -57,6 +55,7 @@ h4 {
 
 img {
   width: 100%;
+  border-radius: 30px;
 }
 
 a {
@@ -141,17 +140,39 @@ a:active {
   display: table;
 }
 
+#all {
+  max-width: 70%;
+  text-align: justify;
+  margin-left: auto;
+  margin-right: auto;
+}
+#all h2 {
+  padding-top: 100px;
+}
+
+#work img {
+  width: 300px;
+}
 #work .row {
-  padding-bottom: 25px;
-  border-bottom: 1px solid #4a4a4a;
+  background-color: #DCE3F5;
+  padding: 20px;
+  border-radius: 30px;
+}
+#work div > h3 {
+  padding-top: 60px;
+}
+.list-padding {
+  margin-top: 30px;
 }
 #skills .row {
   padding-bottom: 25px;
-  border-bottom: 1px solid #4a4a4a;
 }
 
 #prototype {
   text-align: center;
+}
+iframe {
+  margin: 30px 0;
 }
 
 #hero h1 {
@@ -161,7 +182,6 @@ a:active {
 #hero {
   background-color: #DCE3F5;
   padding: 20px 0;
-  margin: 0 15px 0 15px;
   text-align: center;
 }
 #hero span {
@@ -173,81 +193,30 @@ a:active {
 #contact {
   text-align: center;
 }
+#contact {
+  padding-top: 30px;
+  background-color: #DCE3F5;
+}
+#work
 
 .border {
-  margin-top: 30px;
-  padding-top: 30px;
-  border-top: 1px solid #4a4a4a;
+  padding-bottom: 50px;
 }
 #contact div > a {
   margin-top: 40px;
 }
 
-#contact span {
-  display: contents;
-  font-weight: 500;
-}
-#contact span > a {
-  color: blue;
-}
-#contact span > a:hover {
-  color: red;
-}
-#contact span > a:active {
-  color: purple;
-}
-/* Style inputs with type="text", select elements and textareas */
-#form input[type=text], select, textarea {
-  width: 100%; /* Full width */
-  padding: 12px; /* Some padding */
-  border: 1px solid #ccc; /* Gray border */
-  border-radius: 4px; /* Rounded borders */
-  box-sizing: border-box; /* Make sure that padding and width stays in place */
-  margin-top: 6px; /* Add a top margin */
-  margin-bottom: 16px; /* Bottom margin */
-  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
-}
-
-
-#form {
-  background-color: #DCE3F5;
-  margin: 20px 0;
-  padding: 20px 0;
-}
-#form .container {
-  text-align: left;
-}
-
-/* Style the submit button with a specific background color etc */
-#form input[type=submit] {
-  background-color: #014235;
-  color: white;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 15px;
-  cursor: pointer;
-  transition-duration: 0.3s;
-}
-
-/* When moving the mouse over the submit button, add a darker green color */
-#form input[type=submit]:hover {
-  background-color: transparent;
-  color: #014235;
-  border-radius: 15px;
-  border: 3px solid #014235;
-}
-
-/* Add a background color and some padding around the form */
-#form .container {
-  border-radius: 15px;
-  background-color: #f2f2f2;
-  padding: 20px;
+.middle-text {
+  text-align: justify;
+  padding-left: 30px;
 }
 
 #main-page h2 { text-align: center;}
 #about-page h3 { margin-top: 0;}
 #about-page h2 { text-align: center;}
 #about-page h1 { margin: 10px;}
+
+
 
 .center {
   text-align: center;
@@ -281,7 +250,7 @@ ul {
   padding: 10px;
 }
 
-ul > li {
+#skills ul > li {
   display: block;
   font-weight: 500;
   font-size: 14px;
@@ -291,6 +260,10 @@ ul > li {
 ul > li > a {
   padding: 0 10px;
 }
+.highlight {
+  color: darkred;
+  font-weight: 500;
+}
 #social-icons svg {
   width: 30px;
   height: 30px;
@@ -298,6 +271,12 @@ ul > li > a {
 #social-icons li {
   display: inline-block;
   width: 100px;
+}
+
+/* Image styling for project */
+
+#all img {
+  padding: 40px 0;
 }
 
 @keyframes color-change {
@@ -347,6 +326,17 @@ Large devices (1024px or larger)
   margin-left: auto;
   margin-right: auto;
 }
+.col-lg-5 {
+  width: 40%
+  }
+.col-lg-7 {
+  width: 60%
+}
+.col-lg-6 {
+  width: 60%
+  }
+.col-lg-8 {
+  width: 40%
 }
 /* ==============================
 X-large devices (1440px or larger)
