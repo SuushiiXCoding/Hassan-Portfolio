@@ -12,6 +12,7 @@
     <meta name="author" content="Hassan Al-Hashimi">
     <meta name="description" content="Hassan's Portfolio">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/0479b382b8.js" crossorigin="anonymous"></script>
     <title>UX Portfolio by Hassan</title>
   </head>
 
@@ -19,6 +20,7 @@
     <!-- Header Section -->
     <header>
       <div class="container">
+        <div class="navtoggle" id="myNavtoggle">
         <picture>
           <source srcset="img/the_nest_project/img/portfolio_logo/@600px.png" media="(max-width:767px)">
           <img class="logo" src="img/the_nest_project/img/portfolio_logo/@1200px.png" alt="Portfolio Logo">
@@ -34,8 +36,10 @@
             <li>
               <a href="#contact">Contact</a>
             </li>
+            <li><a href="javascript:void(0);" class="icon" onclick="menuToggle()"><i class="fas fa-bars"></i></a></li>
           </ul>
         </nav>
+      </div>
       </div>
     </header>
     <!-- End of Header Section -->
@@ -818,6 +822,8 @@
         </div>
       </div>
     </footer>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
     <script src="js/scripts.js"></script>
   </body>
 </html>

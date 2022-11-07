@@ -17,9 +17,10 @@
 
 header {
   background-color: #DCE3F5;
-  text-align: center;
-  box-shadow: 0px 3px 3px 0px rgba(50, 50, 50, 0.75);
+  box-shadow: 0px 0px 7px 0px rgba(50, 50, 50, 0.75);
   position: relative;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 body {
@@ -181,15 +182,13 @@ iframe {
 }
 #hero {
   background-color: #DCE3F5;
-  padding: 20px 0;
+  padding: 30px 0;
   text-align: center;
 }
 #hero span {
   display: block;
 }
-.mid {
-  margin-left: 250px;
-}
+
 #contact {
   text-align: center;
 }
@@ -197,7 +196,6 @@ iframe {
   padding-top: 30px;
   background-color: #DCE3F5;
 }
-#work
 
 .border {
   padding-bottom: 50px;
@@ -208,8 +206,9 @@ iframe {
 
 .middle-text {
   text-align: justify;
-  padding-left: 30px;
+  padding: 0 30px;
 }
+
 
 #main-page h2 { text-align: center;}
 #about-page h3 { margin-top: 0;}
@@ -217,46 +216,45 @@ iframe {
 #about-page h1 { margin: 10px;}
 
 
-
 .center {
   text-align: center;
 }
 
 .logo {
-  max-width: 100px;
+  max-width: 150px;
+  text-align: left;
 }
 
-nav {
-  width: auto;
-  float: right;
-  margin-top: 4px;
-}
 nav > ul {
   list-style-type: none;
-  margin: 0 0 10px 0;
+  padding: 0;
 }
-nav > ul > li {
-  display: inline-block;
-}
+
 nav > ul > li > a {
-  padding: 0 10px;
   text-transform: uppercase;
   font-weight: 500;
   font-size: 14px;
   color: #4a4a4a;
 }
 
-ul {
-  padding: 10px;
-}
 
 #skills ul > li {
   display: block;
   font-weight: 500;
   font-size: 14px;
-  text-transform: uppercase;
+  padding-bottom: 5px;
 }
 
+.mid {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+#skills ul {
+  padding-left: 0;
+  padding-bottom: 30px;
+}
 ul > li > a {
   padding: 0 10px;
 }
@@ -300,6 +298,28 @@ ul > li > a {
 .cloud-back {
   animation: 34s cloud-move-reverse infinite alternate linear;
 }
+.navtoggle li:not(:last-child) {
+  display: none;
+}
+.navtoggle, .navtoggle.responsive {
+  position: relative;
+}
+.navtoggle li .icon {
+  position: absolute;
+  right: 0;
+  top: 2px;
+  font-size: 20px;
+  padding-right: 0;
+  padding-top: 10px;
+}
+.navtoggle.responsive li  {
+  display: block;
+  text-align: right;
+  padding: 5px;
+}
+.navtoggle.responsive nav {
+  padding: 10px 0 0;
+}
 
 /* ==============================
 Medium devices (640px and larger)
@@ -307,7 +327,8 @@ Medium devices (640px and larger)
 @media only screen and (min-width: 640px) {
   header {
   text-align: unset;
-  padding: 20px 0 13px;}
+  padding: 20px 0 13px;
+}
   [class*="col-"] {
   width: 50%;
   float: left;
@@ -315,6 +336,25 @@ Medium devices (640px and larger)
 }
 #work h3 {
   margin-top: 0;
+}
+#all {
+  text-align: center;
+}
+nav > ul > li {
+  display: inline-block;
+}
+.navtoggle li:not(:last-child) {
+  display: inline-block;
+}
+.navtoggle li:last-child {
+  display: none;
+}
+nav > ul {
+  margin: 1em 0;
+  text-align: right;
+}
+.profile {
+  padding-left: 20px;
 }
 }
 /* ==============================
