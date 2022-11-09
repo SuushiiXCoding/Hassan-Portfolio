@@ -7,31 +7,33 @@
     Secondary Text Colour (lightgrey) - #757575
 */
 
-/* Fonts:
+/*  Fonts:
     Primary Font - Poppins
     Secondary Font - Alegreya */
-
 * {
   box-sizing: border-box;
 }
 
 header {
-  background-color: #DCE3F5;
-  box-shadow: 0px 0px 7px 0px rgba(50, 50, 50, 0.75);
+  background-color: #dce3f5;
+  box-shadow: 0 0 7px 0 rgba(50, 50, 50, 0.75);
   position: relative;
   padding-top: 20px;
   padding-bottom: 20px;
 }
 
 body {
-  background-color: #FFFFFF;
+  background-color: #fff;
   font-family: 'Poppins', sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 1.6;
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   line-height: 1.4;
 }
 
@@ -49,6 +51,7 @@ h3 {
   font-size: 1.75em;
   font-weight: 500;
 }
+
 h4 {
   font-size: 1.35em;
   font-weight: 500;
@@ -60,43 +63,48 @@ img {
 }
 
 a {
-  color: #4E4E4E;
-  text-decoration: none; /* No underlining */
+  color: #4e4e4e;
+  text-decoration: none;
+
+  /* No underlining */
 }
 
 a:visited {
-  color: #4E4E4E;
+  color: #4e4e4e;
 }
 
-a:hover:
-a:focus {
-  color: #B6B6B6;
-  text-decoration: underline; /* Underlining when hovering over a link */
+a:hover: a:focus {
+  color: #b6b6b6;
+  text-decoration: underline;
+
+  /* Underlining when hovering over a link */
 }
 
 a:hover {
-  color: #FFA382;
+  color: #ffa382;
   text-decoration: underline;
 }
 
 a:active {
-  color: #FFA382;
+  color: #ffa382;
 }
 
 /* Button Styling */
 .button {
-  display: inline-block; /* since the <a> tag is inline by default, we need to change this to inline-block, but more on this in the next exercise */
+  /* since the <a> tag is inline by default, we need to change this to inline-block, but more on this in the next exercise */
+  display: inline-block;
   background-color: #014235;
-  color: white; /* needed to override the default link color */
+
+  /* needed to override the default link color */
+  color: white;
   font-weight: 500;
   padding: 15px;
   border-radius: 15px;
-  border-bottom: 0px solid #B6B6B6; /* width of the border, type, color */
   transition-duration: 0.3s;
-  transition-property opacity;
 }
 
-.button, .button:visited {
+.button,
+.button:visited {
   color: white;
 }
 
@@ -109,6 +117,7 @@ a:active {
   border: 3px solid #014235;
   opacity: 0.8;
 }
+
 .button:active {
   opacity: 0.8;
   text-decoration: none;
@@ -118,23 +127,24 @@ a:active {
   background-color: transparent;
   color: #757575;
   text-transform: uppercase;
-  border: 3px solid #014235;;
+  border: 3px solid #014235;
 }
+
 .button.contact:hover {
   background-color: #014235;
-  color: #EEEEEE;
+  color: #eee;
 }
 
 /* Layout styling */
-
 .container {
   padding: 0 15px;
 }
 
 .row {
-  margin: 25px 0; /* 25px top and bottom, 0 left and right */
-
+  /* 25px top and bottom, 0 left and right */
+  margin: 25px 0;
 }
+
 .row::after {
   content: "";
   clear: both;
@@ -143,28 +153,32 @@ a:active {
 
 #all {
   max-width: 70%;
-  text-align: justify;
   margin-left: auto;
   margin-right: auto;
 }
+
 #all h2 {
   padding-top: 100px;
 }
 
-#work img {
+#work_1 img {
   width: 300px;
 }
-#work .row {
-  background-color: #DCE3F5;
+
+#work_1 .row {
+  background-color: #dce3f5;
   padding: 20px;
   border-radius: 30px;
 }
-#work div > h3 {
+
+#work_1 div > h3 {
   padding-top: 60px;
 }
+
 .list-padding {
   margin-top: 30px;
 }
+
 #skills .row {
   padding-bottom: 25px;
 }
@@ -172,19 +186,23 @@ a:active {
 #prototype {
   text-align: center;
 }
+
 iframe {
   margin: 30px 0;
 }
 
 #hero h1 {
-  text-align: center; /* Centers text */
+  /* Centers text */
+  text-align: center;
   margin: 0;
 }
+
 #hero {
-  background-color: #DCE3F5;
+  background-color: #dce3f5;
   padding: 30px 0;
   text-align: center;
 }
+
 #hero span {
   display: block;
 }
@@ -192,14 +210,16 @@ iframe {
 #contact {
   text-align: center;
 }
+
 #contact {
   padding-top: 30px;
-  background-color: #DCE3F5;
+  background-color: #dce3f5;
 }
 
 .border {
   padding-bottom: 50px;
 }
+
 #contact div > a {
   margin-top: 40px;
 }
@@ -209,12 +229,21 @@ iframe {
   padding: 0 30px;
 }
 
+#main-page h2 {
+  text-align: center;
+}
 
-#main-page h2 { text-align: center;}
-#about-page h3 { margin-top: 0;}
-#about-page h2 { text-align: center;}
-#about-page h1 { margin: 10px;}
+#about-page h3 {
+  margin-top: 0;
+}
 
+#about-page h2 {
+  text-align: center;
+}
+
+#about-page h1 {
+  margin: 10px;
+}
 
 .center {
   text-align: center;
@@ -238,7 +267,6 @@ nav > ul > li > a {
   color: #4a4a4a;
 }
 
-
 #skills ul > li {
   display: block;
   font-weight: 500;
@@ -252,59 +280,91 @@ nav > ul > li > a {
   margin-right: auto;
   text-align: center;
 }
+
 #skills ul {
   padding-left: 0;
   padding-bottom: 30px;
 }
+
 ul > li > a {
   padding: 0 10px;
 }
+
+ul > li {
+  list-style-type: none;
+}
+
 .highlight {
   color: darkred;
   font-weight: 500;
 }
+
 #social-icons svg {
   width: 30px;
   height: 30px;
 }
+
 #social-icons li {
   display: inline-block;
   width: 100px;
 }
 
 /* Image styling for project */
-
 #all img {
   padding: 40px 0;
 }
 
 @keyframes color-change {
-  from {fill: #edc655;}
-  to {fill: #f76414;}
+  from {
+    fill: #edc655;
+  }
+
+  to {
+    fill: #f76414;
+  }
 }
+
 .sun {
   animation: 4s color-change infinite alternate linear;
 }
+
 @keyframes cloud-move {
-  from {transform: translate(0,50px);}
-  to {transform: translate(200px,50px);}
+  from {
+    transform: translate(0, 50px);
+  }
+
+  to {
+    transform: translate(200px, 50px);
+  }
 }
+
 .cloud-front {
   animation: 20s cloud-move infinite alternate linear;
 }
+
 @keyframes cloud-move-reverse {
-  from {transform: translate(446px,48px);}
-  to {transform: translate(100px, 48px);}
+  from {
+    transform: translate(446px, 48px);
+  }
+
+  to {
+    transform: translate(100px, 48px);
+  }
 }
+
 .cloud-back {
   animation: 34s cloud-move-reverse infinite alternate linear;
 }
+
 .navtoggle li:not(:last-child) {
   display: none;
 }
-.navtoggle, .navtoggle.responsive {
+
+.navtoggle,
+.navtoggle.responsive {
   position: relative;
 }
+
 .navtoggle li .icon {
   position: absolute;
   right: 0;
@@ -313,11 +373,13 @@ ul > li > a {
   padding-right: 0;
   padding-top: 10px;
 }
-.navtoggle.responsive li  {
+
+.navtoggle.responsive li {
   display: block;
   text-align: right;
   padding: 5px;
 }
+
 .navtoggle.responsive nav {
   padding: 10px 0 0;
 }
@@ -327,63 +389,77 @@ Medium devices (640px and larger)
 ================================= */
 @media only screen and (min-width: 640px) {
   [class*="col-"] {
-  width: 50%;
-  float: left;
-  padding: 10px;
+    width: 50%;
+    float: left;
+    padding: 10px;
+  }
+
+  #work_1 h3 {
+    margin-top: 0;
+  }
+
+  #all {
+    text-align: justify;
+  }
+
+  nav > ul > li {
+    display: inline-block;
+  }
+
+  .navtoggle li:not(:last-child) {
+    display: inline-block;
+  }
+
+  .navtoggle li:last-child {
+    display: none;
+  }
+
+  nav > ul {
+    margin: 1em 0;
+  }
+
+  .profile {
+    padding-left: 20px;
+  }
+
+  nav {
+    float: right;
+  }
 }
-#work h3 {
-  margin-top: 0;
-}
-#all {
-  text-align: center;
-}
-nav > ul > li {
-  display: inline-block;
-}
-.navtoggle li:not(:last-child) {
-  display: inline-block;
-}
-.navtoggle li:last-child {
-  display: none;
-}
-nav > ul {
-  margin: 1em 0;
-}
-.profile {
-  padding-left: 20px;
-}
-nav {
-  float: right;
-}
-}
+
 /* ==============================
 Large devices (1024px or larger)
 ================================= */
 @media only screen and (min-width: 1024px) {
   .container {
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-}
-.col-lg-5 {
-  width: 40%
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
   }
-.col-lg-7 {
-  width: 60%
-}
-.col-lg-6 {
-  width: 60%
+
+  .col-lg-5 {
+    width: 40%;
   }
-.col-lg-8 {
-  width: 40%
+
+  .col-lg-7 {
+    width: 60%;
+  }
+
+  .col-lg-6 {
+    width: 60%;
+  }
+
+  .col-lg-8 {
+    width: 40%;
+  }
 }
+
 /* ==============================
 X-large devices (1440px or larger)
 ================================= */
-@media only screen and (min-width: 1440px) {
-}
+@media only screen and (min-width: 1440px)
+
 /* ==============================
-Extra-large devices (1920px or larger)
+XX-large devices (1920px or larger)
 ================================= */
-@media only screen and (min-width: 1920px) {
-}
+  @media only screen and (min-width: 1920px)
